@@ -2,8 +2,8 @@ const { template } = require("@babel/core");
 
 function concatArray(array1, array2) {
   if (
-    (array1 === null && array2 === undefined) ||
-    (array1 === null && array2 === undefined)
+    (array1 === null || array2 === undefined) &&
+    (array1 === null || array2 === undefined)
   )
     return undefined; // array1 และ array2 ทั้งคู่มีค่า null หรือ undefined ให้คืนค่ากลับเป็น undefined
   else if (array1 === [] && array2 === [])
